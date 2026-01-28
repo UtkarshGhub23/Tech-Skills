@@ -1,0 +1,31 @@
+// Given -> N array, Count number of elements having atleast 1 element greater than itself.
+
+/* EXAMPLE ->  arr = [4,2,9,1,6]
+Count = 4                                     
+Max element = 9
+
+// Observation --> For every max element there won't be any element greater than it 
+*/
+
+public class array {
+    public static void main(String[] args) {
+
+        int[] arr = {4, 2, 9, 1, 6};
+
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < max) {
+                count++;
+            }
+        }
+
+        System.out.println("Count: " + count);
+    }
+}
