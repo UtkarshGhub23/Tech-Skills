@@ -1,7 +1,7 @@
 /* given an array elements, check if there exists a pair i,j such that arr[i] + arr[j] == k
 note - i and j are index value and k is the given sum 
 */
-public class pair_sum {
+public class pairSum {
     public static void main(String[] args) {
         int[] arr = {2, 5, 6, 9, 3, 10};
         int k = 15;
@@ -26,4 +26,5 @@ public class pair_sum {
 
     }  
 }
+
 
