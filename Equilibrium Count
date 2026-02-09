@@ -1,0 +1,36 @@
+/* given n array element count number of equilibrium index.
+ an index is said to be equilibrium when sum of all elements left of the ith index is equals to the sum of all elements right of ith index
+note --> if i == 0 left sum is 0 and if i == -1 then right sum is 0
+*/
+
+public class countEquilibrium{
+    public static void main(String[] args) {
+        int[] a = {1, 3, 5, 2, 2};
+        int n = a.length;
+        int count = 0;
+
+        if (n <= 1) {
+            System.out.println(n);
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int left = 0;
+            int right = 0;
+
+            for (int j = 0; j < i; j++) {
+                left += a[j];
+            }
+
+            for (int j = i + 1; j < n; j++) {
+                right += a[j];
+            }
+
+            if (left == right) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
